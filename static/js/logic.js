@@ -11,4 +11,17 @@ var myMap = L.map("map", {
     id: "mapbox.satellite",
     accessToken: API_KEY
   }).addTo(myMap);
+
+
+  var jsonData;
+  d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson', data => {
+    jsonData = data.features[100];
+    // console.log(jsonData);
+    
+    Object.values(data.features).forEach(obj => {
+      // var lat =key
+      // var lng = value
+      console.log(obj);
+    });
   
+  });
