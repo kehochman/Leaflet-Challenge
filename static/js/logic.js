@@ -65,13 +65,13 @@ d3.json(
 
     legend.onAdd = function () {
       var div = L.DomUtil.create("div", "info legend");
-      var grades = [0, 1, 2, 3, 4, 5];
+      var grades = [0, 1, 2, 3, 4, '5+'];
       var colors = ["white", "yellow", "orange", "red", "purple", "blue"];
 
       for (let i = 0; i < grades.length; i++) {
-        div.innerHTML += `<i style="background:${colors[i]}">${grades[i]}</i><br>`;
+        div.innerHTML += `<i style="background:${colors[i]}">${grades[i]}</i>`;
       }
-  
+
       return div;
     };
 
